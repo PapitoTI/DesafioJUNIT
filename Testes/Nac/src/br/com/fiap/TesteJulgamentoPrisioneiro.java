@@ -23,4 +23,6 @@ public class TesteJulgamentoPrisioneiro extends JulgamentoPrisioneiro{
 		assertEquals(ex, ac);
 		
 	}
+	
+	
 }
