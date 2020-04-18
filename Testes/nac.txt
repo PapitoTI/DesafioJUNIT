@@ -1,0 +1,76 @@
+Nome Pedro Estevam Oliveira Fonseca    RM: 80193
+
+
+1 Criei JUnit encima do algoritmo
+
+package br.com.fiap;
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import br.com.fiap.JulgamentoPrisioneiro;
+
+public class TesteJulgamentoPrisioneiro extends JulgamentoPrisioneiro{
+
+	@Test
+	public void testeCalcularPena() {
+		
+		int PENA_INOCENCIA = 0;
+		int PENA_CONDENACAO_MUTUA = 5;
+		int PENA_CONDENACAO_INDIVIDUAL = 10;
+		int PENA_CONDENACAO_CUMPLICES = 1;
+		
+		JulgamentoPrisioneiro j = new JulgamentoPrisioneiro();
+		
+		int ex = PENA_CONDENACAO_MUTUA;
+		int ac = j.calculaPena(Resposta.DELACAO_C, Resposta.DELACAO_C);
+		
+		assertEquals(ex, ac);
+		
+	}
+}
+
+
+
+https://github.com/PapitoTI/DesafioJUNIT
+
+
+
+3- Erros apresentados no metodo resposta sendo corrigido com "ENUM"
+
+java.lang.AssertionError: expected:<5> but was:<15>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:542)
+	at br.com.fiap.TesteJulgamentoPrisioneiro.testeCalcularPena(TesteJulgamentoPrisioneiro.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+
+Seguindo o Algoritmo passado alteramos o valor das variaveis para corrigir o erro
+
+
+4
